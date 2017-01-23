@@ -1,4 +1,14 @@
 <template name="Recipes">
     {{> NewRecipe }}
+    <!--This template is for generating form -->
+    <section class="recipes">
+        {{#if Template.subscriptionsReady}}
+            {{#each recipes}}
+                {{> Recipe}}
+            {{/each}}
+        {{else}}
+            <p>Loading</p>
+        {{/if}}
+    </section>
 
 </template>
